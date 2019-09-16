@@ -1,0 +1,190 @@
+\chapter{Background}
+\label{cha:789}
+\paragraph{}
+Earlier works on BPMNPA aimed to the creation of a tool to generate a set of new BPMN elements that when inserted in an existing Business Process Diagram would create a viable path. Initially the path was designed to manage failure recovery in a run-time execution of such diagram. During the developing process it appeared that the scope of this prototype could have been larger. In the end, BPMNPA has been built, having in mind three principle use cases, which are listed and described below.
+
+\begin{itemize}  
+\item Dynamic Failure Recovery: a run-time process execution (or simulation) may encounter some particular conditions that drive the token, used to track the process flow, to a deadlock state. This deadlock state in the ordinary use of Business Process Diagrams cannot be resolved autonomously by the process.
+
+\item Optimization problem: a process engineer needs to optimize the usage of a resource or the time of execution and he/she has to rethink the Business Process Diagram to include the optimization changes.
+
+\item Alternate path exploration: same as the previous points, the only difference consist in the search for new actions without prioritizing any particular metric.
+\end{itemize}
+
+
+% planning workflow studies
+There are several academic studies about the uses cases previously described.
+The concept of re-planning a work-flow without human interaction has been explored in \textit{"Dynamic Failure Recovery of Generated Workflows"}(Gajewski, Michal and Momotko, Mariusz and Meyer, Harald and Schuschel,
+Hilmar and Weske, Mathias), in which a concept to handle the complex dynamic situation of a partially executed workflow it's presented. The concept consist in recovering the previous execution in an irretrievable error scenario using a multi-step procedure letting the execution terminate successfully.\cite{gajewski2005dynamic}
+Another possibility to reach the goal of an automated error recovery system is to use learning techniques for processes that are not fully specified in every aspect, as described in the paper \textit{"An integrated life cycle for workflow management based on learning and planning"}(Ferreira, Hugo M and Ferreira,
+Diogo R)\cite{ferreira2006integrated}.
+
+% ke tools  
+A comprehensive overview of knowledge engineering tools that can be used for producing planning domain models with some kind of interaction with workflow diagrams could be found in \textit{"Knowledge Engineering Tools in Planning: State-of-the-art and Future Challenges"}(Shah, M and Chrpa, Luk{\'a}s and Jimoh, Falilat and Kitchin, D and McCluskey, T and Parkinson, Simon and Vallati, Mauro), which contains a list of the main engineering tools in planning to simplify the creation of planning models.\cite{shah2013knowledge}
+
+% planlet sam
+The most relevant publications, to the scope of this thesis, are represented by the next two papers cited.
+\textit{"Planlets: automatically recovering dynamic processes in YAWL"}(Marrella, Russo, and Mecella) which is about integrating planning techniques to specify recovery features to a YAWL model\cite{marrella2012planlets}.
+\textit{"SAP Speaks PDDL: Exploiting a Software-Engineering Model for Planning in Business Process Management"}(Hoffmann, Weber, Kraft), which expose the idea of annotating each transaction of the BPM context with a planning-like description to consent a planning systems to generate the desired processes in a fully automated way.\cite{hoffmann2012sap}
+
+
+In the following sections an in-depth analysis of the various technologies, used in the BPMNPA prototype, will be conducted.
+
+\newpage
+% research on the PDDL syntax example
+\section{Planning Domain Definition Language}
+\label{sec:context}
+The Planning Domain Definition Language (PDDL) is an Artificial Intelligence (AI) planning language. Many versions of PDDL are available and many more are variants and extensions of such a language. In this section we will discuss primarily PDDL1.2 and PDDL2.1. 
+
+The 1.2 version has been the official language of the 1st and 2nd International Planning Competition (AIPS-98 and AIPS-00)\cite{ips}. In particular, it supports a large number of syntactic features as basic STRIPS and conditional effect, and it uses an Extended BNF (EBNF) notation. PDDL separates the model of the planning problem in domain description and problem description. 
+The domain contains the description of the elements present in every specific problem. 
+Practically, it contains the domain name, the description of possible actions and the existing predicates. 
+The problem contains specific planning-problem elements, in specific the definition of all the possible objects atoms in the logical universe (objects), initial conditions conjunction of true facts (init), and the goal-states (goal).\cite{mcdermott1998pddl}
+
+The 2.1 version introduces some additional features while maintaining valid all the PDDL domains written for the precedent versions. 
+Numeric expressions, conditions and effects are introduced in this version of PDDL and with them the possibility to model non-binary resources. 
+This addition (in combination with the Plan Metrics, used to specify the basis on which a plan will be evaluated) allows a quantitative evaluation of plans and not just goal-driven as the previous versions.\cite{fox2003pddl2}
+
+In order to select the proper version that should have been used to write domains and problems for the BPMNPA usage, some hypothesis have been done. In the majority of them a simple usage of the 1.2 specification of PDDL would have worked perfectly to fulfill the main goal of this thesis. Using the STRIPS support, the alternate path search and the dynamic failure recovery could have been easily accomplished. Yet, to add more versatility, and to make the optimization goal feasible, BPMNPA has been built to use the PDDL2.1 specifications.
+
+To be certain of the validity of the PDDL data created and used during the development of BPMNPA, "VAL", a PDDL validator, has been used to analyze and validate domain and problem files, discovering in addition, information about type structure, relationship between arguments, overloading of predicates and functions.\cite{VAL}
+
+\begin{lstlisting}[caption=A simple move action according to PDDL1.2][language=PDDL]
+(:action move
+    :parameters (?from - ROOM ?to - ROOM)
+    :precondition (and (at ?from))
+    :effect (and (at ?to) (not(at ?from)) )
+)
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption=A move action with the cost in terms of fuel according to PDDL2.1][language=PDDL]
+(:action move
+    :parameters (?from - ROOM ?to - ROOM)
+	 :precondition (and (at ?from))
+    :effect (and (at ?to) (not(at ?from)) (decrease fuel-level (fuel-required ?from ?to)) )
+)
+\end{lstlisting}
+
+
+% research on the  PLANNERS esempi di output e input di planners
+\section{Planners}
+\label{sec:context}
+The planner is responsible for discovering a plan using the actions specified in a PDDL domain accordingly to the specifications described in a PDDL problem.
+
+Some words should be spent explaining in which format a planner takes a domain and a problem and in which format it generate an output. Although the expected input arguments of a planner and the expected output values will always be practically the same, there is not a standard regulating such format. 
+For this reason, many planners may require to specify PDDL domain and PDDL problem using different notations. For instance, some of them require to specify domain and problem in a particular order, others want PDDL files to be preceded by specific options and others ask for additional parameters to start the execution. 
+The same problem  arises while trying to parse the output of a planner, in fact there is no standard to lean on. 
+Due to this issues, it was not possible to build an application compatible with the majority of PDDL planners and it has been decided to build BPMNPA with a one hundred percent compatibility with a single planner.
+
+Many planners have been tested (Metric-FF, Blackbox, OPTIC, SMTPLAN+, DINO, ...), the majority of the available planners have to be compiled by the user in order to work properly. While the procedure to compile the most recent released planners, mainly written in Python, it is relatively easy, the pre-python era planners are fairly complicated to compile to make them usable on modern 64-bit operative system. Due to this problem, to help anyone who wants to replicate the results exhibited in this thesis, it has been chosen to use a planner with a pre-compiled source code in order to reduce the required time to configure the tools required by BPMNPA in order to work properly. 
+
+While the are plenty of different PDDL versions not as many are supported by the majority of PDDL planners. When it comes to find a suitable planner to satisfy all the PDDL versions that we intend to use, and the requirements previously satisfied, an extensive research has to be done. 
+
+Three main planning system have been identified "Blackbox", "Fast Downward" and "LPG-td". 
+Of such three planners, only LPG-td offers a full support of PDDL Numeric expressions, conditions and effects\cite{lpg, fast-downward-planner, blackbox-planner}.
+
+LPG-td requires as input settings a PDDL domain, a PDDL problem and the number of desired solutions.
+\begin{lstlisting}[caption=Mandatory input parameters of LPG-td]
+LPG-td-1.4 SETTINGS:
+NECESSARY SETTINGS
+-o <string>              specifies the file of the operators 
+-f <string>              specifies the file of (init/goal) facts
+-n <number>              specifies the desired number of solutions;
+                         alternative options are -speed and -quality
+\end{lstlisting}
+LPG-td generates a plan in the following format, 
+the first part of the file contains a few lines of data about the creation of the plan, this information are preceded by a  semicolon, which represents a comment in the Backus–Naur form\cite{backusnaur}. The rest of the document contains the plan, composed by a list of rows that contain: the temporal slot of execution, name of the action with his parameters and time of execution.
+
+\begin{lstlisting}[caption=An example of LPG-td plan]
+; Version LPG-td-1.4
+; Seed 67984682
+; Command line: ./lpg-td -o hanoi_domain.pddl -f hanoi_prob.pddl -n 1 -out hanoi_out 
+; Problem hanoi_prob.pddl
+; Actions having STRIPS duration
+; Time 0.01
+; Search time 0.01
+; Parsing time 0.00
+; Mutex time 0.00
+; NrActions 7
+
+0:   (MOVE D1 D2 RIGHT) [1]
+1:   (MOVE D2 D3 MID) [1]
+2:   (MOVE D1 RIGHT D2) [1]
+3:   (MOVE D3 LEFT RIGHT) [1]
+4:   (MOVE D1 D2 LEFT) [1]
+5:   (MOVE D2 MID D3) [1]
+6:   (MOVE D1 LEFT D2) [1]
+\end{lstlisting}
+
+
+If a plan metric is specified in the PDDL problem and his relative functions are written in the PDDL domain, the output of a correct execution of LPG-td will show the metric value at the last row of the comments section. While the rest of the document will contain the plan. 
+
+\begin{lstlisting}[caption=An example of LPG-td plan using metrics and numeric fluents.]
+; Version LPG-td-1.4
+; Seed 67984682
+; Command line: ./lpg-td -o hanoi_domain.pddl -f hanoi_prob.pddl -n 1 -out hanoi_out 
+; Problem hanoi_prob.pddl
+; Actions having STRIPS duration
+; Time 0.01
+; Search time 0.01
+; Parsing time 0.00
+; Mutex time 0.00
+; MetricValue 10.00
+
+0:   (MOVE D1 D2 RIGHT) [1]
+1:   (MOVE D2 D3 MID) [1]
+2:   (MOVE D1 RIGHT D2) [1]
+3:   (MOVE D3 LEFT RIGHT) [1]
+4:   (MOVE D1 D2 LEFT) [1]
+5:   (MOVE D2 MID D3) [1]
+6:   (MOVE D1 LEFT D2) [1]
+\end{lstlisting}
+
+
+% research on the BPMN assumptions, esempi di come verranno realizzati I DIAGRAMMI PER GLI EXCLUSIVE E I DIAGRAMMI PER I PARALLEL
+\section{Business Process Model and Notation}
+\label{sec:context}
+Business Process Model and Notation is an XML-based language proposed by the Object Management Group (OMG), with the object of presenting a notation to describe especially business work-flows (a.k.a. "processes") and higher-level collaborations between internal or external business partners. 
+Typically, the most basic Business Process Diagram it is presented with a Start Event, an End Event and a bunch of Flow Objects in the middle. A Flow Object can be a Gateway, an Event or a Task, and those Flow Objects are linked with each other by Sequence Flow elements that show the direction of the process execution.
+
+% parallel 
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.6\linewidth}
+    	\includegraphics[width=\linewidth]{simple.eps}
+    	\caption{The initial Business Process Diagram.}
+  	\end{subfigure}
+	\begin{subfigure}[b]{1.05\linewidth}
+    	\includegraphics[width=\linewidth]{parallel.eps}
+    	\caption{The Business Process Diagram after adding the new generated plans.}
+  	\end{subfigure}
+	\caption{A BPD modification with a plan that has more than one action per temporal slot.}
+	\label{fig:coffee}
+\end{figure}
+
+The main set of tools chosen for editing and modeling BPMN2 files are "Eclipse BPMN2 Modeler" and the Eclipse Modeling Framework (EMF). Eclipse BPMN2 Modeler is built on the Eclipse Plug-in Architecture and consent the user to create Business Process Diagram in the BPMN2 language in the Eclipse IDE, while EMF it is usable to build tools and other applications based on a structured data model. The union of these two technologies gives to the developer not only a BPMN2 graphical modeler 	but also an accessible way to transpose Business Process Models in Java Objects, deploying methods to allow many ways to interact with Business Process Models.
+
+One of the main concerns during the developing of BPMNPA was \textit{"how should we represent the new plan generated in BPMN?"}. 
+The solution has been found in representing the new actions with Task elements and using Sequence Flow elements to link such actions with each other. If two or more actions have the same temporal slot, then those actions will be contained between a diverging Parallel Gateway and a converging Parallel Gateway, because de facto they have the same properties. 
+\textit{"A Parallel Gateway is used to synchronize (combine) parallel flows and to create parallel flows."}\cite{bpmn2doc} this means that every different outgoing link from a diverging Parallel Gateway can be executed at a random order and, in case of a converging Parallel Gateway all his incoming links must be completed before proceeding with the execution of other elements. While the PDDL actions that has the same temporal slot can be executed in a random order before executing the actions in the next temporal slot.
+
+% exclusive 
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.7\linewidth}
+    	\includegraphics[width=\linewidth]{preex.eps}
+    	\caption{The initial Business Process Diagram.}
+  	\end{subfigure}
+	\begin{subfigure}[b]{0.85\linewidth}
+    	\includegraphics[width=\linewidth]{postex.eps}
+    	\caption{The Business Process Diagram after adding the new generated plans.}
+  	\end{subfigure}
+	\caption{A BPD modification with a plan that operate on a Exclusive Gateway.}
+	\label{fig:coffee}
+\end{figure}
+
+The other main problem faced was \textit{"How should gateways influence the creation of a new plan?"}
+In case of diverging Exclusive Gateway, if a Flow Objects belonging one of the outgoing branches has been selected to set the PDDL goal, then many new plans will be generated for every other outgoing branch of such Gateway.
+In case of Parallel Gateway all the Flow Objects in between a diverging and a converging one are not considered as usable elements to set the PDDL goal. 
+

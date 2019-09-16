@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{ips}
+{AIPS-00 Planning Competition} aips-00 description.
+\newblock \url{http://www.cs.toronto.edu/aips2000/}.
+\newblock Accessed: 2019-05-05.
+
+\bibitem{backusnaur}
+{Backus–Naur form} wikipedia.
+\newblock \url{https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form}.
+
+\bibitem{blackbox-planner}
+{blackbox} documentation.
+\newblock \url{https://www.cs.rochester.edu/u/kautz/satplan/blackbox/}.
+
+\bibitem{fast-downward-planner}
+{fast-downward} documentation.
+\newblock \url{http://www.fast-downward.org/}.
+
+\bibitem{ferreira2006integrated}
+Hugo~M Ferreira and Diogo~R Ferreira.
+\newblock An integrated life cycle for workflow management based on learning
+  and planning.
+\newblock {\em International Journal of Cooperative Information Systems},
+  15(04):485--505, 2006.
+
+\bibitem{VAL}
+Howey~Cresswell Fox, Long.
+\newblock {VAL - PDDL Validator} documentation.
+\newblock \url{https://github.com/KCL-Planning/VAL/}.
+
+\bibitem{fox2003pddl2}
+Maria Fox and Derek Long.
+\newblock Pddl2. 1: An extension to pddl for expressing temporal planning
+  domains.
+\newblock {\em Journal of artificial intelligence research}, 20:61--124, 2003.
+
+\bibitem{gajewski2005dynamic}
+Michal Gajewski, Mariusz Momotko, Harald Meyer, Hilmar Schuschel, and Mathias
+  Weske.
+\newblock Dynamic failure recovery of generated workflows.
+\newblock In {\em 16th International Workshop on Database and Expert Systems
+  Applications (DEXA'05)}, pages 982--986. IEEE, 2005.
+
+\bibitem{lpg}
+Alfonso Gerevini, Alessandro Saetti, Ivan Serina, and Paolo Toninelli.
+\newblock Lpg-td: a fully automated planner for pddl2. 2 domains.
+\newblock In {\em In Proc. of the 14th Int. Conference on Automated Planning
+  and Scheduling (ICAPS-04) International Planning Competition abstracts}.
+  Citeseer, 2004.
+
+\bibitem{gonzalez2009jabbah}
+Arturo Gonz{\'a}lez-Ferrer, Juan Fern{\'a}ndez-Olivares, Luis Castillo, et~al.
+\newblock Jabbah: a java application framework for the translation between
+  business process models and htn.
+\newblock {\em Proceedings of the 3rd International Competition on Knowledge
+  Engineering for Planning and Scheduling (ICKEPS’09)}, 2009.
+
+\bibitem{hoffmann2012sap}
+J{\"o}rg Hoffmann, Ingo Weber, and Frank~Michael Kraft.
+\newblock Sap speaks pddl: Exploiting a software-engineering model for planning
+  in business process management.
+\newblock {\em Journal of Artificial Intelligence Research}, 44:587--632, 2012.
+
+\bibitem{marrella2012planlets}
+Andrea Marrella, Alessandro Russo, and Massimo Mecella.
+\newblock Planlets: automatically recovering dynamic processes in yawl.
+\newblock In {\em OTM Confederated International Conferences" On the Move to
+  Meaningful Internet Systems"}, pages 268--286. Springer, 2012.
+
+\bibitem{mcdermott1998pddl}
+Drew McDermott, Malik Ghallab, Adele Howe, Craig Knoblock, Ashwin Ram, Manuela
+  Veloso, Daniel Weld, and David Wilkins.
+\newblock Pddl--the planning domain definition language--version 1.2.
+\newblock {\em Yale Center for Computational Vision and Control, Tech. Rep. CVC
+  TR-98-003/DCS TR-1165}, 1998.
+
+\bibitem{bpmn2doc}
+OMG.
+\newblock {\em Business Process Model and Notation (BPMN)}.
+\newblock January 2011.
+
+\bibitem{bpmn2examples}
+OMG.
+\newblock {\em BPMN 2.0 by Example}.
+\newblock June 2010.
+
+\bibitem{shah2013knowledge}
+M~Shah, Luk{\'a}s Chrpa, Falilat Jimoh, D~Kitchin, T~McCluskey, Simon
+  Parkinson, and Mauro Vallati.
+\newblock Knowledge engineering tools in planning: State-of-the-art and future
+  challenges.
+\newblock {\em Knowledge engineering for planning and scheduling}, 53:53, 2013.
+
+\end{thebibliography}

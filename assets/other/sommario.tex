@@ -1,0 +1,61 @@
+\chapter*{Introduction} % senza numerazione
+\label{Introduction}
+
+\addcontentsline{toc}{chapter}{Introduction} % da aggiungere comunque all'indice
+
+% contesto
+\paragraph{}
+A key to Business Process Management is Business Process Modeling Notation (BPMN), which represents the actual standard for business processes diagrams. It is widely used to design, manage and realize business processes in a graphical representation that models the steps of a planned business process from end to end. The goal of BPMN is to provide an intuitive notation to describe complex process semantics. 
+
+
+% problema 
+\paragraph{Problem}
+In BPMN high efforts and many hours of work are required to build an efficient and well-working Business Process Model. Still, in a BPMN diagram, the notation can show only a limited amount of information about the process elements, providing a limited chunk of knowledge about agent's resources and actions.
+
+Process engineers put such effort to build processes to achieve any changes on the diagram and any further optimization. Indeed, in specific cases they need to redesign the entire process and his interactions with other processes.
+
+Furthermore, the dynamic behavior of processes over time could drive the process to a failure state that cannot be resolved autonomously. To manage such errors a human interaction may be needed and many steps to troubleshoot the problem can be required. For this reason, to understand the causes and restore the standard order of execution, relying on an external entity is necessary. 
+Such external reliability, to recover the flow of activities, affects negatively the dynamism of BPMN diagrams due to the mandatory maintenance of its processes. 
+
+To overcome such deadlocks, the technology from the field of planning, a subset of AI technology, may come in handy. The planning technology requires exhaustive specification and adequate tools in order to work properly. With the proper combination of planning tools and planning language a partial solution may be found. 
+
+
+% letteratura
+\paragraph{}
+The complexity of Business Process Diagram design process may be attenuated by many tools currently available. 
+Some of the most remarkable ways to improve the BPMN design are represented by the BPMN simulation tools. Indeed, executing a Business Process simulation can underline many flaws of the BPMN diagram. 
+A BPMN simulation tool presents itself with the possibility to execute in a sandbox many instances of a BPMN diagram. Many simulation modes can be used and every mode represents a useful way to diagnose the existing problems of a diagram. 
+For instance, a step-by-step simulation allows the user to step through the process element by element, like a debugger, and to visualize the process flow. In addition, many types of analysis can be done on every type of simulation. 
+Useful information (such as total time, resource consumption and queue time) may be easily measured by many of this tools while configuring different starting parameters as resources allocation and maximum time. 
+
+Over BPMN related tools, to design more powerful, precise and reliable processes, other tools exists that can help a process designer gain useful information to design process. One of such tools is STS-tool, which may be used to model the interactions between participants in a socio-technical system. The construction of a socio-technical security model can automatically derive the mandatory security requirements, the knowledge gained from such work can drive the process engineer to build a security compliant BPMN process.
+
+
+In the planning field the main language utilized is Planning Domain Definition Language (PDDL). The planning problem in PDDL is separated in two major parts: domain description and the related problem description. Such a division allows a separation between the elements that are present in every specific problem and the elements present only in particular problems. At the time of writing the latest specifications of PDDL are contained in the version of the language 3.1.
+
+To be able to use PDDL domain and PDDL problem to find a suitable plan it is necessary a planner. A planner is the application that permit an user to find a satisfying plan to fulfill the PDDL problem content.
+The best planners compete in the International Planning Competition (IPC), which is an annual competition that de facto represents a compendium of planning resources and planners. 
+
+Furthermore, the interaction between planning languages and business process notations has been traced from some precedent studies and applications. 
+Such as JABBAH, a Java Application Framework for the translation from a Business Process Diagram to HTN\cite{gonzalez2009jabbah}. 
+Another valuable paper that drawn the idea of integration between PDDL and BPMN is SAP Speaks PDDL, using which ``\textit{business  experts  may  create new processes simply by specifying the desired behavior in terms of status variable value changes:  effectively, by describing the process in their own language.}``\cite{hoffmann2012sap}. 
+
+
+% obbiettivo 
+\paragraph{Solution}
+The purpose of this thesis is to present an integration between PDDL and BPMN2 through a standalone application written in Java called Business Process Model and Notation Planner Assistant (BPMNPA).
+BPMNPA aims to be a wise tool to use PDDL to update the Business Process Diagram creating a new set of BPMN elements  to resolve a problem. 
+The problem could be an error at runtime during an execution of the process, an optimization problem that aim to minimize or maximize some of the resources used or a simple research for a new path for the Business Process Diagram. 
+To generate a satisfying output BPMNPA will use a large amount of resources to complete as much autonomous work as possible. 
+The Java application will manage all the input parameters, extract all valuable information from the Business Process Diagram, create a PDDL file that will contain the data necessary to execute a PDDL planner in compliance with the PDDL domain, execute such planner and, given that output, update the BPMN2 file with a set of new BPMN elements representing the new plan provided by the planner.
+
+
+This solution has been planned with the idea of resolving the deadlock problem of a process that an agent cannot complete in BPMN2 by himself. 
+BPMNPA was originally designed for the purpose of resolving such problems in a run-time application. 
+During the development it was made clear that other usages would have been suitable for BPMNPA, such as assistant to a business process developer to explore different design choices during the diagram designing and to update an existing BPMN diagram with an optimization-oriented mentality.
+
+% struttura del documento
+\paragraph{}
+This thesis is structured as follows. 
+Chapter 1 introduces some concepts and technical background about Business Process Models and Planning Domain Definition Language. Chapter 2 describes the big pictures of BPMNPA with some simple examples and exposing the expected input parameters and the output results format. Chapter 3 describes some  implementation details of BPMNPA exposing a few of the procedures developed for this prototype. Chapter 4 exposes the evaluations of BPMNPA with some real-world examples and Chapter 5 concludes the document with the conclusions and future works.
+

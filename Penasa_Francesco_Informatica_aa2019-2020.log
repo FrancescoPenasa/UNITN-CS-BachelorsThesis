@@ -1,0 +1,754 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.16)  16 SEP 2019 14:18
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Penasa_Francesco_Informatica_aa2019-2020.tex
+(./Penasa_Francesco_Informatica_aa2019-2020.tex
+LaTeX2e <2018-12-01>
+(./assets/settings/preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/11/13 3.27 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen103
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count90
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count91
+\Gm@cntv=\count92
+\c@Gm@tempcnt=\count93
+\Gm@bindingoffset=\dimen104
+\Gm@wd@mp=\dimen105
+\Gm@odd@mp=\dimen106
+\Gm@even@mp=\dimen107
+\Gm@layoutwidth=\dimen108
+\Gm@layoutheight=\dimen109
+\Gm@layouthoffset=\dimen110
+\Gm@layoutvoffset=\dimen111
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/plain.sty
+Package: plain 1996/04/22 Plain TeX emulation (DPC)
+\tabs@latex=\box27
+\tabsyet@latex=\box28
+\tabsdone@latex=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box30
+\beforetitleunit=\skip43
+\aftertitleunit=\skip44
+\ttl@plus=\dimen114
+\ttl@minus=\dimen115
+\ttl@toksa=\toks18
+\titlewidth=\dimen116
+\titlewidthlast=\dimen117
+\titlewidthfirst=\dimen118
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+)
+\c@caption@flags=\count94
+\c@ContinuedFloat=\count95
+)
+\c@subfigure=\count96
+\c@subtable=\count97
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count98
+\lst@gtempboxa=\box31
+\lst@token=\toks19
+\lst@length=\count99
+\lst@currlwidth=\dimen126
+\lst@column=\count100
+\lst@pos=\count101
+\lst@lostspace=\dimen127
+\lst@width=\dimen128
+\lst@newlines=\count102
+\lst@lineno=\count103
+\lst@maxwidth=\dimen129
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count104
+\lst@skipnumbers=\count105
+\lst@framebox=\box32
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2018/09/02 1.7 listings language file
+))
+(./assets/settings/specific-settings.tex)
+(./Penasa_Francesco_Informatica_aa2019-2020.aux
+
+LaTeX Warning: Label `sec:context' multiply defined.
+
+
+LaTeX Warning: Label `sec:context' multiply defined.
+
+
+LaTeX Warning: Label `fig:coffee' multiply defined.
+
+
+LaTeX Warning: Label `cha:789' multiply defined.
+
+
+LaTeX Warning: Label `sec:456' multiply defined.
+
+
+LaTeX Warning: Label `fig:coffee' multiply defined.
+
+
+LaTeX Warning: Label `cha:789' multiply defined.
+
+
+LaTeX Warning: Label `sec:456' multiply defined.
+
+
+LaTeX Warning: Label `sec:456' multiply defined.
+
+
+LaTeX Warning: Label `sec:456' multiply defined.
+
+
+LaTeX Warning: Label `sec:456' multiply defined.
+
+
+LaTeX Warning: Label `cha:789' multiply defined.
+
+
+LaTeX Warning: Label `sec:456' multiply defined.
+
+
+LaTeX Warning: Label `sec:456' multiply defined.
+
+
+LaTeX Warning: Label `sec:456' multiply defined.
+
+)
+\openout1 = `Penasa_Francesco_Informatica_aa2019-2020.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 483.69687pt, 42.67912pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23575pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04675pt
+* \textwidth=483.69687pt
+* \textheight=731.23575pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-47.23828pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=106.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count106
+\scratchdimen=\dimen130
+\scratchbox=\box33
+\nofMPsegments=\count107
+\nofMParguments=\count108
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen131
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
+\everyMPtoPDFconversion=\toks21
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count112
+
+(./assets/other/pagina_iniziale.tex
+Package epstopdf Info: Source file: <assets/figures/logo_unitn_black_center.eps
+>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 316347 bytes
+(epstopdf)             Output file: <assets/figures/logo_unitn_black_center-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 84572 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/logo_unitn_
+black_center-eps-converted-to.pdf assets/figures/logo_unitn_black_center.eps>
+(epstopdf)             \includegraphics on input line 8.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/logo_unitn_black_center-eps-con
+verted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
+5> allowed
+<assets/figures/logo_unitn_black_center-eps-converted-to.pdf, id=1, 293.095pt x
+ 126.4725pt>
+File: assets/figures/logo_unitn_black_center-eps-converted-to.pdf Graphic file 
+(type pdf)
+<use assets/figures/logo_unitn_black_center-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/logo_unitn_black_center-eps-converted-t
+o.pdf  used on input line 8.
+(pdftex.def)             Requested size: 290.22107pt x 125.23131pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 30.
+) [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./assets/figures/logo_unit
+n_black_center-eps-converted-to.pdf>] (./assets/other/ringraziamenti.tex
+[2
+
+] [3]) [4
+
+
+] (./Penasa_Francesco_Informatica_aa2019-2020.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 10.
+)
+\tf@toc=\write3
+\openout3 = `Penasa_Francesco_Informatica_aa2019-2020.toc'.
+
+ [1
+
+]
+(./assets/settings/ridefinizioni.tex) (./assets/other/sommario.tex [2
+
+])
+[3] (./assets/chapthers/capitolo1.tex
+Chapter 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
+ [4]
+
+Package Listings Warning: Text dropped after begin of listing on input line 52.
+
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 61.
+
+
+[5] [6]
+Package epstopdf Info: Source file: <assets/figures/simple.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 4332902 bytes
+(epstopdf)             Output file: <assets/figures/simple-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 19184 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/simple-eps-
+converted-to.pdf assets/figures/simple.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/simple-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/simple-eps-converted-to.pdf, id=47, 1747.52875pt x 410.53375pt>
+
+File: assets/figures/simple-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/simple-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/simple-eps-converted-to.pdf  used on in
+put line 155.
+(pdftex.def)             Requested size: 290.22107pt x 68.1799pt.
+Package epstopdf Info: Source file: <assets/figures/parallel.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 6476192 bytes
+(epstopdf)             Output file: <assets/figures/parallel-eps-converted-to.p
+df>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 37829 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/parallel-ep
+s-converted-to.pdf assets/figures/parallel.eps>
+(epstopdf)             \includegraphics on input line 159.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/parallel-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/parallel-eps-converted-to.pdf, id=48, 1823.81375pt x 588.1975pt
+>
+File: assets/figures/parallel-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/parallel-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/parallel-eps-converted-to.pdf  used on 
+input line 159.
+(pdftex.def)             Requested size: 507.88318pt x 163.79666pt.
+
+Overfull \hbox (24.18631pt too wide) in paragraph at lines 154--162
+ [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <assets/figures/preex.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 6426053 bytes
+(epstopdf)             Output file: <assets/figures/preex-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 29598 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/preex-eps-c
+onverted-to.pdf assets/figures/preex.eps>
+(epstopdf)             \includegraphics on input line 176.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/preex-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/preex-eps-converted-to.pdf, id=49, 1644.1425pt x 647.41875pt>
+File: assets/figures/preex-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/preex-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/preex-eps-converted-to.pdf  used on inp
+ut line 176.
+(pdftex.def)             Requested size: 338.58632pt x 133.3243pt.
+Package epstopdf Info: Source file: <assets/figures/postex.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 6496608 bytes
+(epstopdf)             Output file: <assets/figures/postex-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 38530 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/postex-eps-
+converted-to.pdf assets/figures/postex.eps>
+(epstopdf)             \includegraphics on input line 180.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/postex-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/postex-eps-converted-to.pdf, id=50, 1553.805pt x 692.5875pt>
+File: assets/figures/postex-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/postex-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/postex-eps-converted-to.pdf  used on in
+put line 180.
+(pdftex.def)             Requested size: 411.14528pt x 183.26004pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7]) [8 <./assets/figures/simple-eps-converted-to.pdf> <./assets/figures/parall
+el-eps-converted-to.pdf> <./assets/figures/preex-eps-converted-to.pdf> <./asset
+s/figures/postex-eps-converted-to.pdf>] (./assets/chapthers/capitolo2.tex
+Chapter 2.
+Package epstopdf Info: Source file: <assets/figures/diagram.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 63158 bytes
+(epstopdf)             Output file: <assets/figures/diagram-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 18356 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/diagram-eps
+-converted-to.pdf assets/figures/diagram.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/diagram-eps-converted-to.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/diagram-eps-converted-to.pdf, id=69, 673.51625pt x 191.71625pt>
+
+File: assets/figures/diagram-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/diagram-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/diagram-eps-converted-to.pdf  used on i
+nput line 35.
+(pdftex.def)             Requested size: 483.69687pt x 137.68454pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] [10 <./assets/figures/diagram-eps-converted-to.pdf>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 76.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 76.
+ [11]
+Package epstopdf Info: Source file: <assets/figures/examplepre.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 60219 bytes
+(epstopdf)             Output file: <assets/figures/examplepre-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 37144 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/examplepre-
+eps-converted-to.pdf assets/figures/examplepre.eps>
+(epstopdf)             \includegraphics on input line 123.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/examplepre-eps-converted-to.pdf
+): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/examplepre-eps-converted-to.pdf, id=86, 474.77374pt x 183.68625
+pt>
+File: assets/figures/examplepre-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/examplepre-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/examplepre-eps-converted-to.pdf  used o
+n input line 123.
+(pdftex.def)             Requested size: 338.58632pt x 131.00111pt.
+Package epstopdf Info: Source file: <assets/figures/examplep.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 123132 bytes
+(epstopdf)             Output file: <assets/figures/examplep-eps-converted-to.p
+df>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 82401 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/examplep-ep
+s-converted-to.pdf assets/figures/examplep.eps>
+(epstopdf)             \includegraphics on input line 127.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/examplep-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/examplep-eps-converted-to.pdf, id=87, 723.70375pt x 364.36125pt
+>
+File: assets/figures/examplep-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/examplep-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/examplep-eps-converted-to.pdf  used on 
+input line 127.
+(pdftex.def)             Requested size: 483.69687pt x 243.52588pt.
+) [12 <./assets/figures/examplepre-eps-converted-to.pdf> <./assets/figures/exam
+plep-eps-converted-to.pdf>] (./assets/chapthers/capitolo3.tex
+Chapter 3.
+
+Package Listings Warning: Text dropped after begin of listing on input line 11.
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+
+Package Listings Warning: Text dropped after begin of listing on input line 60.
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+Overfull \hbox (0.46251pt too wide) in paragraph at lines 124--126
+\OT1/cmtt/m/n/10.95 -o domain -f prob -out output -n 1\OT1/cmr/m/n/10.95 ". BPM
+-NPA han-dles the sub-sti-tu-tions of the fol-low-ing pieces:
+ []
+
+[15]) [16] (./assets/chapthers/capitolo4.tex
+Chapter 4.
+Package epstopdf Info: Source file: <assets/figures/pizza.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 7317326 bytes
+(epstopdf)             Output file: <assets/figures/pizza-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 90498 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/pizza-eps-c
+onverted-to.pdf assets/figures/pizza.eps>
+(epstopdf)             \includegraphics on input line 14.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/pizza-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/pizza-eps-converted-to.pdf, id=186, 1621.05624pt x 747.79375pt>
+
+File: assets/figures/pizza-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/pizza-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/pizza-eps-converted-to.pdf  used on inp
+ut line 14.
+(pdftex.def)             Requested size: 483.69687pt x 223.13034pt.
+Package epstopdf Info: Source file: <assets/figures/warehouse.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 3915021 bytes
+(epstopdf)             Output file: <assets/figures/warehouse-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 156641 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/warehouse-e
+ps-converted-to.pdf assets/figures/warehouse.eps>
+(epstopdf)             \includegraphics on input line 27.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/warehouse-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/warehouse-eps-converted-to.pdf, id=187, 1258.7025pt x 514.92375
+pt>
+File: assets/figures/warehouse-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/warehouse-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/warehouse-eps-converted-to.pdf  used on
+ input line 27.
+(pdftex.def)             Requested size: 386.95897pt x 158.29686pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17 <./assets/figures/pizza-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <assets/figures/noble.eps>
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 8513405 bytes
+(epstopdf)             Output file: <assets/figures/noble-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2019-09-16 14:10:42
+(epstopdf)                    size: 360163 bytes
+(epstopdf)             Command: <repstopdf --outfile=assets/figures/noble-eps-c
+onverted-to.pdf assets/figures/noble.eps>
+(epstopdf)             \includegraphics on input line 41.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./assets/figures/noble-eps-converted-to.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/figures/noble-eps-converted-to.pdf, id=194, 1756.5625pt x 803.0pt>
+File: assets/figures/noble-eps-converted-to.pdf Graphic file (type pdf)
+<use assets/figures/noble-eps-converted-to.pdf>
+Package pdftex.def Info: assets/figures/noble-eps-converted-to.pdf  used on inp
+ut line 41.
+(pdftex.def)             Requested size: 483.69687pt x 221.11362pt.
+) [18 <./assets/figures/warehouse-eps-converted-to.pdf> <./assets/figures/noble
+-eps-converted-to.pdf>] (./assets/other/conclusioni.tex) [19]
+(./Penasa_Francesco_Informatica_aa2019-2020.bbl
+! Undefined control sequence.
+l.5 \newblock \url
+                  {http://www.cs.toronto.edu/aips2000/}.
+? 
+! Undefined control sequence.
+l.10 \newblock \url
+                   {https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form}.
+? 
+! Undefined control sequence.
+l.14 \newblock \url
+                   {https://www.cs.rochester.edu/u/kautz/satplan/blackbox/}.
+? 
+! Undefined control sequence.
+l.18 \newblock \url
+                   {http://www.fast-downward.org/}.
+? 
+! Undefined control sequence.
+l.30 \newblock \url
+                   {https://github.com/KCL-Planning/VAL/}.
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.95 \end{thebibliography}
+                          
+? 
+) [20
+
+] [21] (./Penasa_Francesco_Informatica_aa2019-2020.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6037 strings out of 492615
+ 90008 string characters out of 6131390
+ 385876 words of memory out of 5000000
+ 9822 multiletter control sequences out of 15000+600000
+ 11355 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,8n,42p,769b,1789s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Penasa_Francesco_Informatica_aa2019-2020.pdf (25 pages, 11618
+27 bytes).
+PDF statistics:
+ 257 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+

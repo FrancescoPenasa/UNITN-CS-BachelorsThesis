@@ -1,0 +1,30 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Introduction}{2}% 
+\contentsline {paragraph}{}{2}% 
+\contentsline {paragraph}{Problem}{2}% 
+\contentsline {paragraph}{}{2}% 
+\contentsline {paragraph}{Solution}{3}% 
+\contentsline {paragraph}{}{3}% 
+\contentsline {chapter}{\numberline {1}Background}{4}% 
+\contentsline {paragraph}{}{4}% 
+\contentsline {section}{\numberline {1.1}Planning Domain Definition Language}{5}% 
+\contentsline {section}{\numberline {1.2}Planners}{5}% 
+\contentsline {section}{\numberline {1.3}Business Process Model and Notation}{7}% 
+\contentsline {chapter}{\numberline {2}Java Application}{9}% 
+\contentsline {section}{\numberline {2.1}Input Parameters}{10}% 
+\contentsline {paragraph}{Mandatory input parameters}{10}% 
+\contentsline {paragraph}{Optional input parameters}{11}% 
+\contentsline {section}{\numberline {2.2}Transforming Plans into Business Processes}{11}% 
+\contentsline {chapter}{\numberline {3}Implementation details}{13}% 
+\contentsline {section}{\numberline {3.1}Load BPMN2 definitions in Java Objects}{13}% 
+\contentsline {section}{\numberline {3.2}Breadth-First-Search on Business Process Diagram}{14}% 
+\contentsline {section}{\numberline {3.3}Problem generation, planner execution and output evaluation}{15}% 
+\contentsline {section}{\numberline {3.4}BPMN Update}{15}% 
+\contentsline {chapter}{\numberline {4}Evaluation}{17}% 
+\contentsline {section}{\numberline {4.1}Pizza Delivery}{17}% 
+\contentsline {section}{\numberline {4.2}Shipment Process}{17}% 
+\contentsline {section}{\numberline {4.3}Nobel Prize Example}{18}% 
+\contentsline {chapter}{Conclusions}{19}% 
+\contentsline {paragraph}{Results}{19}% 
+\contentsline {paragraph}{Future Works}{19}% 
+\contentsline {chapter}{Bibliography}{20}% 

@@ -1,0 +1,23 @@
+\chapter*{Conclusions} % senza numerazione
+\label{Conclusions}
+
+\addcontentsline{toc}{chapter}{Conclusions} % da aggiungere comunque all'indice
+
+
+%obbiettivi della tesi 
+The main goal of the thesis was to present the BPMNPA application prototype and to explore the possible interactions between PDDL and BPMN. Once that we have found a way to link this two technologies using planners and plug-ins, we aimed to find out how to act on BPMN processes through the results of PDDL planning. 
+
+\paragraph{Results}
+Orchestration process\footnote{Orchestration process is a standard process we most commonly come across in BPMN. It typically models a single coordinating point of view.} and simple processes with a limited number of collaboration between the agents of the business process model can be analyzed with BPMNPA, in order to explore different paths from what was originally designed in the BPMN processes, to optimize processes and to handle run-time unrecoverable error. 
+
+Yet, when using BPMNPA with real-life processes, one of the biggest flaws of the prototype emerges: diagrams with a heavy usage of collaborations and communications between processes will result in a lack of valid outputs.
+Furthermore, when using real-world examples has become clear that Lanes containing only one Flow Object cannot be taken as starting point for the BPMNPA execution.
+
+\paragraph{Future Works}
+A step further can be done to increase the functionality of this prototype. Indeed, the compatibility with many planner may be established with a deep check on the input parameters values and modifying the way how output parsing is done.
+
+Many more BPMN elements can be supported as Message Flow and Data Objects, and 
+PDDL files may be automatically created and initialized with the basic requirements for a planner execution for every new BPMN element added to the diagram. 
+Furthermore, PDDL definitions of BPMN elements nowadays can be specified by the BPMN engineer, directly in the BPMN modeler, during the construction of the diagram. Indeed, adding support to this technology may improve by far the organization and usability of this prototype.
+
+

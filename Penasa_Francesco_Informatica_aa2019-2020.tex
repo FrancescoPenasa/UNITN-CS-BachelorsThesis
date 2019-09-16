@@ -1,0 +1,66 @@
+\input{./assets/settings/preamble}
+\input{./assets/settings/specific-settings}
+
+\begin{document}
+
+\frontmatter
+
+	\pagenumbering{gobble}
+
+	\input{./assets/other/pagina_iniziale.tex}
+	\clearpage
+
+	\input{./assets/other/ringraziamenti}
+	\clearpage
+	\pagestyle{plain}
+
+\mainmatter
+
+	% indice
+	\tableofcontents
+	\clearpage
+
+	% gruppo per definizone di successione capitoli senza interruzione di pagina
+	\begingroup
+		\input{./assets/settings/ridefinizioni}
+
+		% introduzione
+		\input{./assets/other/sommario}
+		\newpage
+		
+		% capitoli
+		\input{./assets/chapthers/capitolo1}
+		\newpage
+		\input{./assets/chapthers/capitolo2}
+		\newpage	
+		\input{./assets/chapthers/capitolo3}
+		\newpage
+		\input{./assets/chapthers/capitolo4}
+		
+		% conclusioni
+		\newpage		
+		\input{./assets/other/conclusioni}
+		
+	\endgroup
+
+\newpage
+% --------------- bibliografia --------------- %
+	% aggiunta del capitolo nell'indice
+	\addcontentsline{toc}{chapter}{Bibliography}
+	
+	% stile con ordinamento alfabetico in funzione degli autori
+	\bibliographystyle{plain}
+	\bibliography{./assets/other/biblio}
+	
+	
+	
+% --------------- allegato --------------- %	
+%	\titleformat{\chapter}
+%		{\normalfont\Huge\bfseries}{Allegato \thechapter}{1em}{}
+		
+	% sezione Allegati - opzionale
+%\appendix
+%	\input{./assets/other/allegati}
+
+
+\end{document}

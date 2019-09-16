@@ -1,0 +1,170 @@
+
+\chapter{Implementation details}
+\label{cha:789}
+In this chapter some particular algorithms and implementation decisions of the prototype will be displayed.
+
+
+\section{Load BPMN2 definitions in Java Objects}
+\label{sec:456}
+A fundamental step in the developing phase, to grant an easy access to the BPMN2 elements, it is accomplished by the following piece of code. Such code will grant the possibility to visit the object \texttt{Definitions def} as a tree. \texttt{Definitions def} contains all the BPMN2 elements of the file present at the URL location.
+
+\begin{lstlisting}[caption=load BPMN in Java.][language=Java]
+
+void init(String URL) {
+	File file = new File(URL);
+
+	// Create a resource set.
+	ResourceSet resourceSet = new ResourceSetImpl();
+
+	// Register the default resource factory
+	resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("bpmn2",
+			new Bpmn2ResourceFactoryImpl());
+
+	// Register the package
+	Bpmn2Package ecorePackage = Bpmn2Package.eINSTANCE;
+
+	// Get the URI of the model file.
+	URI fileURI = URI.createFileURI(file.getAbsolutePath());
+
+	// Demand load the resource for this file.
+	this.setResource(resourceSet.getResource(fileURI, true));
+
+	try {
+		getResource().save(Collections.EMPTY_MAP);
+	} catch (IOException e) {}
+
+	DocumentRoot doc = null;
+	for (int i = 0; i < getResource().getContents().size(); i++) {
+		if (getResource().getContents().get(i) instanceof DocumentRoot) {
+			doc = (DocumentRoot) getResource().getContents().get(i);
+			break;
+		}
+	}
+
+	Definitions def = null;
+	if (doc != null) {
+		def = doc.getDefinitions();
+	}
+}
+\end{lstlisting}
+
+
+\section{Breadth-First-Search on Business Process Diagram}
+\label{sec:456}
+The BPMN diagram is treated as a collection of direct graphs, considering Flow Objects as vertex and Sequence Flows as edges.
+
+In order to visit the BPMN diagram the popular algorithm breadth-first-search (BFS) on direct graphs has been modified.
+Using the BFS algorithm, the graph's nodes are visited in distance order from the starting node, where the distance is defined as minimum number of edge to pass through from the starting vertex. Since the BFS firstly visits the nearest vertex and then the furthest ones, this order is used to mark the nodes priority. 
+Displayed below an extract of the BFS on BPMN algorithm.
+
+\begin{lstlisting}[caption=BFS on Business Process Diagram.][language=Java]
+void bpmn2_bfs(String from) {
+
+	// declare DataStructures for the BFS execution.
+	Queue<FlowNode> S = new LinkedList<FlowNode>();
+	Map<String, Boolean> visitato = new HashMap<String, Boolean>();
+
+	// find the start FlowNode and init the DataStructures.
+	FlowNode start = null;
+	for (RootElement re : def.getRootElements()) {
+		if (re instanceof Process) {
+			Process p = (Process) re;
+			for (FlowElement fe : p.getFlowElements()) {
+				if (fe instanceof FlowNode) {
+					if (fe.getId().equals(from)) {
+						start = (FlowNode)fe;
+					}
+				}
+				visitato.put(fe.getId(), false);
+			}
+		}
+	}
+	S.add(start);
+	visitato.put(start.getId(), true);
+
+	// cycle through all the nodes following FlowNode "from".
+	while(! S.isEmpty()) {
+		FlowNode u = S.poll();		
+		// ---------------------- //
+		// --- vertex actions --- //
+		// ---------------------- //
+
+		for (SequenceFlow sf : u.getOutgoing()) {
+			FlowNode dst = sf.getTargetRef();
+				if (! visitato.get(dst.getId())) {
+				visitato.put(dst.getId(), true);
+				S.add(dst);
+			}
+			// -------------------- //
+			// --- edge actions --- //
+			// -------------------- //
+		}
+	}
+}
+\end{lstlisting}
+
+
+\section{Problem generation, planner execution and output evaluation}
+\label{sec:456}
+
+To manage all the PDDL relative section we have done a massive use of file reading and file writing operations.
+
+% pg
+The generation of a PDDL problem needs to access the domain file and two problem file of the BPMN elements.
+The domain file is needed in order to retrieve the \texttt{domain name}.
+The \texttt{domain name} needs to be the same in the domain file and in the problem file.
+
+One of the PDDL problem files belong to the BPMN element from which the new plan needs to start, from such file we will extract the Objects PDDL Object and the Init PDDL Object. These two objects describe the initial resources available to develop a plan.
+
+The other PDDL problem file belongs to the BPMN element in which we plan to stop. From this file we will extract the Goal PDDL Object, which will represent the desired end states of the plan.
+
+All the data gathered are going to be parsed, checked for the correct syntax and written in a newly created problem PDDL file. Furthermore, if "min" or "max" input parameters has been used, the Metrics PDDL Object, with the proper configuration, is added to the newly generated PDDL problem file.
+
+%planner
+The input parameter inserted by the user about the planner will probably look like this "\texttt{./LPG-td -o domain -f prob -out output -n 1}". BPMNPA handles the substitutions of the following pieces: the substring \texttt{domain} with the URL of the PDDL domain, the substring \texttt{prob} with the URL of the PDDL problem just generated, the substring \texttt{output} with the same URL of \texttt{prob} replacing the sub-string "\texttt{.pddl}" with "\texttt{-output}".
+Furthermore, BPMNPA will start the execution of the planner with the parameters previously described.
+
+%ov
+Once the planner has completed successfully the generation of the new plan, the output file are analyzed. 
+If there is no output file, it means that the planner returned \texttt{no solution} as result, otherwise the number of actions contained in the plan will be counted. 
+If the number of actions exceed the value of the parameter \texttt{distance} specified by the user, then the plan is not valid and a new plan must be generated using another Flow Object. In the other case the plan will be considered valid and the actions will be parsed.
+
+
+\section{BPMN Update}
+\label{sec:456}
+Given a plan parsed from a planner output, it is possible to modify a BPMN2 file adding the actions discovered. The action set will be represented as Task element, which will have as name the name of the action and as ID a random alphanumeric string. If a set of actions are supposed to be executed in the same temporal slot, a diverging Parallel Gateway will link the set of actions with the same temporal slot to the previous action, while a converging Parallel Gateway will link the set of actions with the next one.
+
+New BPMN2 elements will be generated with the \texttt{Bpmn2Factory} class which will create and initiate the BPMN element. To link Flow Objects between each other some Sequence Flow are created and with their method \texttt{setSourceRef(FlowNode)} and \texttt{setTargetRef(FlowNode)} the link is established.
+To add to the diagram the new objects created it is necessary to use a BPMN2 Process object, from the Process get the FlowElement list and add the new elements to such list. Same procedure must be adopted with the BPMN2 Lane object. The main difference using Lanes consist into adding only the new FlowNodes and not the SequenceFlows.
+
+\begin{lstlisting}[caption=Example of the creation of new Tasks and SequenceFlows.]
+
+	Task from = Bpmn2Factory.eINSTANCE.createTask();
+	from.setName("from");
+
+	Task to = Bpmn2Factory.eINSTANCE.createTask();
+	to.setName("to");
+
+	SequenceFlow sf = Bpmn2Factory.eINSTANCE.createSequenceFlow();
+	sf.setSourceRef(from);
+	sf.setTargetRef(to);
+
+	// add to the process
+	process.getFlowElements().add(from);
+	process.getFlowElements().add(to);
+	process.getFlowElements().add(sf);
+
+	// add to the lane
+	lane.getFlowNodeRefs().add(from);
+	lane.getFlowNodeRefs().add(to);
+
+\end{lstlisting}
+
+At this point the BPMN2 file will contain the added Flow Elements, but a last step is mandatory to have a correct graphical representation in a BPMN2 diagram. 
+Some BPMN Viewers are able to recreate the \texttt{BPMNDiagram} XML tag using the processes and collaborations described in the \texttt{Definitions} XML tag, for this reason an easy and fast way to allow the correct representation is to delete from \texttt{Definitions def} all \texttt{BPMNdiagram} tags and their content.
+
+If a BPMN Viewer not supporting this feature is utilized, a \texttt{BPMNShape} or a \texttt{BPMNEdge} must be created using the \texttt{BpmnDiFactory} class for every change in the \texttt{Definitions def}. The new elements created need to be added to the correct \texttt{BPMNDiagram} tag contained in the BPMN \texttt{Definitions def}.
+
+\begin{lstlisting}[caption=Remove all BPMNDiagram tags from the BPMNDefinitions.]
+	def.getDiagrams().removeAll(def.getDiagrams());
+\end{lstlisting}
